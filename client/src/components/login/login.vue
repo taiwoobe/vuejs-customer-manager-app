@@ -13,7 +13,7 @@
                 <input type="password" required class="form-control" name="password" placeholder="Enter Password" v-model="user.password">
                 <br>
                 <div class="spinner-holder">
-                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary" type="submit" v-bind:disabled="btnDisabled" @click="checkLogin">Login</button>
                 <div class="alert alert-danger" role="alert" v-if="error">
                     {{error}}
                 </div>
@@ -35,12 +35,13 @@
                     email: '',
                     password: ''
                 },
-                disabled: true,
+                btnDisabled: false,
                 error: ''
             }
         },
         methods: {
             checkLogin() {
+                this.btnDisabled = true;
                 if(this.user.email === 'eve.holt@reqres.in' && this.user.password === 'cityslicka') {
                     this.$router.push({name: 'allCustomers'})
                 } else {
