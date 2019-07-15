@@ -62,7 +62,7 @@ import CustomerService from '../../services/customer.services';
                     gender: this.customer.gender,
                     phone: this.customer.phone
                 });
-                this.$router.push({ name: 'customers' })
+                this.$router.push({ name: 'allCustomer' })
             }
         }
     }
