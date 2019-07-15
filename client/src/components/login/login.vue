@@ -44,7 +44,7 @@
                 if(this.user.email === 'eve.holt@reqres.in' && this.user.password === 'cityslicka') {
                     this.$router.push({name: 'allCustomers'})
                 } else {
-                    this.error = 'Wrong Login Details. PLease try again.';
+                    this.error = 'Wrong Login Details. Please try again.';
                     this.user.email = '';
                     this.user.password = '';
                 }

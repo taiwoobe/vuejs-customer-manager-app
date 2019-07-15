@@ -52,23 +52,18 @@ export default {
         this.getCustomers();
     },
     methods: {
-        async getCustomers() {
-            try {
-                const response = await CustomerService.fetchCustomers();
+        getCustomers() {
+            CustomerService.fetchCustomers().then(response => {
                 this.customers = response.data.data;
-            } catch (error) {
-                console.error(error);
-            }
+            }).catch(error => { 
+                console.log(error)
+            });
         },
         async deleteCustomer (id) {
-            await CustomerService.deleteCustomerByID(id)
+            await CustomerService.deleteCustomerByID(id);
+            this.getCustomers();
         }
-    },
-    watch: {
-        customers: function() {
-            return this.getCustomers();
-        }
-    },
+    }
 }
 </script>
 
