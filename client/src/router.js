@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import AllCustomerComponent from './components/customer/all-customers-component.vue'
 import CreateCustomerComponent from './components/customer/create-customer-component.vue'
 import EditCustomerComponent from './components/customer/edit-customer-component.vue'
+import LoginComponent from './components/login/login.vue'
 
 Vue.use(Router)
 
@@ -14,7 +15,13 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      redirect: '/login',
       component: Home
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginComponent
     },
     {
       path: '/customers',
@@ -25,7 +32,7 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'allCustomer',
+          name: 'allCustomers',
           component: AllCustomerComponent
         },
         {

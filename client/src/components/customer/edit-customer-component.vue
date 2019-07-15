@@ -69,5 +69,7 @@ import CustomerService from '../../services/customer.services';
 </script>
 
 <style lang="scss" scoped>
-
+.form-section {
+    padding-top: 50px;
+}
 </style>

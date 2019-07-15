@@ -1,6 +1,6 @@
 <template>
     <div class="form-section col-md-6 offset-md-3">
-        <h1>Add Customer</h1>
+        <h1 class="text-center">Add Customer</h1>
         <form @submit.prevent="addCustomer">
             <div class="form">
                 <div class="form-group">

@@ -1,7 +1,8 @@
 <template>
     <div class="container">
         <div style="float: right;">
-            <router-link v-bind:to="{ name: 'createCustomer' }" class="btn btn-primary">Create New Customer</router-link>
+            <router-link v-bind:to="{ name: 'createCustomer' }" class="btn btn-primary" style="margin-right: 20px;">Create New Customer</router-link>
+            <router-link v-bind:to="{ name: 'login' }" class="btn btn-primary">Logout</router-link>
         </div>
         <router-view></router-view>
         <div v-if="customers.length > 0" class="table-wrap">
@@ -77,5 +78,8 @@ a {
 }
 table {
     margin-top: 20px;
+}
+.container {
+    padding-top: 50px;
 }
 </style>
