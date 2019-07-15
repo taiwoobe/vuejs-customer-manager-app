@@ -1,19 +1,19 @@
-import axios from '../config/config'
+import { HTTP } from '../config/config'
 
 export default {
     fetchCustomers () {
-        return axios().get('customers')
+        return HTTP.get('customers')
     },
     createCustomer(customer) {
-        return axios().post('customers', customer);
+        return HTTP.post('customers', customer);
     },
     updateCustomer(customer) {
-        return axios().put(`customers/${customer.id}`, customer);
+        return HTTP.put(`customers/${customer.id}`, customer);
     },
     getCustomerByID(customer){
-        return axios().get(`customers/${customer.id}`);
+        return HTTP.get(`customers/${customer.id}`);
     },
     deleteCustomerByID(id) {
-        return axios().delete(`customers/${id}`);
+        return HTTP.delete(`customers/${id}`);
     }
 }

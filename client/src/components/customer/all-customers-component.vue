@@ -56,12 +56,15 @@ export default {
             CustomerService.fetchCustomers().then(response => {
                 this.customers = response.data.data;
             }).catch(error => { 
-                console.log(error)
+                console.log(error);
             });
         },
-        async deleteCustomer (id) {
-            await CustomerService.deleteCustomerByID(id);
-            this.getCustomers();
+        deleteCustomer (id) {
+            CustomerService.deleteCustomerByID(id).then(resposne => {
+                this.getCustomers();
+            }).catch(error => {
+                console.log(error);
+            });
         }
     }
 }
