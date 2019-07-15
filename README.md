@@ -1,2 +1,2 @@
 # vuejs-customer-manager-app
-A CRUD customer management application built with NodeJS, ExpressJS, MongoDB and Vue.JS. 
+A FullStack CRUD customer management application built with NodeJS, ExpressJS, MongoDB and Vue.JS. 
