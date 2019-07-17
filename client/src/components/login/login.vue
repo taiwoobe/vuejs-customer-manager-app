@@ -7,10 +7,10 @@
             <form @submit.prevent="checkLogin">
                 <h2>Login to Customer Management System</h2>
                 <label for="email"> Email Address: <small>(eve.holt@reqres.in)</small></label>
-                <input type="text" required class="form-control" name="email" placeholder="Enter Email Address" v-model="user.email">
+                <input type="text" required class="form-control email-field" name="email" placeholder="Enter Email Address" v-model="user.email">
                 <br>
                 <label for="password"> Password: <small>(cityslicka)</small></label>
-                <input type="password" required class="form-control" name="password" placeholder="Enter Password" v-model="user.password">
+                <input type="password" required class="form-control password-field" name="password" placeholder="Enter Password" v-model="user.password">
                 <br>
                 <div class="spinner-holder">
                 <button class="btn btn-primary" type="submit" v-bind:disabled="btnDisabled" @click="checkLogin">Login</button>
